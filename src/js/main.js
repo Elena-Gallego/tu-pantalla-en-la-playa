@@ -45,7 +45,7 @@ function resetFavourites(event) {
 //REMOVE FAVORITE ITEM
 function removeFavouriteItem(event) {
   //eliminar del array el objeto
-  const liElement = event.currentTarget.parentElement;
+  const liElement = event.currentTarget.parentElement.parentElement;
   const elemName = liElement.querySelector("h2").innerHTML;
   const currentFavouriteIndex = favourites.findIndex((favourite) => {
     return favourite.name === elemName;
@@ -71,10 +71,11 @@ function reloadFavouriteList() {
   favouriteList.innerHTML = "";
   console.log(favouriteList);
   if (favourites.length > 0) {
+    favouriteList.innerHTML = "Tus favoritas";
     const liButtonElem = document.createElement("li");
     const resetButton = document.createElement("button");
     resetButton.type = "button";
-    resetButton.innerHTML = "Reset";
+    resetButton.innerHTML = "Reset All";
     resetButton.classList.add("reset-button");
     liButtonElem.appendChild(resetButton);
     favouriteList.appendChild(liButtonElem);
@@ -89,11 +90,13 @@ function reloadFavouriteList() {
     h2Element.innerHTML = favourites[i].name;
     liElement.appendChild(h2Element);
     const buttonElement = document.createElement("button");
-    buttonSearch.classList.add("x-button");
+    buttonElement.classList.add("x-button");
     buttonElement.type = "button";
-    buttonElement.innerHTML = "x";
+    buttonElement.innerHTML = "X";
+    h2Element.appendChild(buttonElement);
+
     buttonElement.addEventListener("click", removeFavouriteItem);
-    liElement.appendChild(buttonElement);
+
     favouriteList.appendChild(liElement);
   }
   console.log(favouriteList);
@@ -133,12 +136,11 @@ function getListData(event) {
   fetch(`http://api.tvmaze.com/search/shows?q=${inputText}`)
     .then((response) => response.json())
     .then((data) => {
-      dataList.innerHTML = "Resultado de la búsqueda";
+      dataList.innerHTML = "Hemos encontrado esto:";
       for (let i = 0; i < data.length; i++) {
         const liElement = document.createElement("li");
         liElement.setAttribute("id", data[i].show.id);
         const imgElement = document.createElement("img");
-
         if (data[i].show.image) {
           imgElement.src = data[i].show.image.medium;
         } else {
@@ -159,7 +161,7 @@ buttonSearch.addEventListener("click", getListData);
 
 //LOCALSTORAGE/
 const savedFavourites = JSON.parse(localStorage.getItem("key-favourites"));
-if (savedFavourites) {
+if (savedFavourites && savedFavourites.length > 0) {
   favourites = savedFavourites;
   reloadFavouriteList();
 }
