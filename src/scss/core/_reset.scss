@@ -171,6 +171,7 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  border: inherit;
 }
 
 /**
@@ -182,6 +183,7 @@ button,
 input {
   /* 1 */
   overflow: visible;
+  border: inherit;
 }
 
 /**
@@ -315,6 +317,7 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
+  border: inherit;
 }
 
 /* Interactive

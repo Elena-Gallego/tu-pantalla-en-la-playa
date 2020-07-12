@@ -1,11 +1,102 @@
 body {
-  padding: 2rem;
+  width: 100vw;
   height: 100vh;
-  background: url("../images/logo-adalab.png") center center no-repeat
-    $color-white;
-  font-family: $font-main;
+  font-family: "Oswald", sans-serif;
+  border-color: inherit;
+  border: none;
 }
 
 .favourite-styles {
+  width: auto;
+  margin-top: 20px;
   background-color: #50b2ab;
+}
+
+.data-list {
+  width: auto;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  text-align: center;
+  color: #692518;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-left: 55%;
+  margin-right: 20px;
+  li {
+    width: auto;
+  }
+
+  h2 {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  img {
+    width: auto;
+    margin-top: 10px;
+    max-width: 85%;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @media all and (min-width: 768px) {
+    margin-right: 100px;
+  }
+  @media all and (min-width: 1200px) {
+  }
+}
+.main {
+  width: 100vw;
+  height: 100hv;
+  display: flex;
+  flex-direction: column;
+}
+
+.favourite-list {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  max-width: 30%;
+  list-style-type: none;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-right: 40%;
+  margin-left: 10px;
+  li {
+    width: auto;
+  }
+
+  h2 {
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+  }
+  img {
+    border: 1px grey solid;
+    width: auto;
+    margin-top: 10px;
+    max-width: 90%;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .reset-button {
+    font-weight: 350;
+    font-size: small;
+    color: #50b2ab;
+    border: 1px grey solid;
+    border-radius: 10px;
+    padding: 4px;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
 }

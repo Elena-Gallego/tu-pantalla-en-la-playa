@@ -3,3 +3,33 @@
   justify-content: space-evenly;
   margin-bottom: 3rem;
 }
+
+.header-wrapper {
+  padding: 10px;
+  width: 100vw;
+  height: 200px;
+  background-image: url(/assets/images/1366_2000.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 1px grey solid;
+}
+.input-text {
+  width: 30%;
+  padding: 10px;
+  color: grey;
+  min-width: 200px;
+
+  min-height: 40px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.button-search {
+  color: grey;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 20px;
+  border: grey solid;
+  background-color: #c9fbfb;
+}
