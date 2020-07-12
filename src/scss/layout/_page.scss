@@ -10,7 +10,7 @@ body {
 .favourite-styles {
   width: auto;
   margin-top: 20px;
-  background-color: #50b2ab;
+  background-color: #68b9c7;
 }
 .data-section {
   margin-right: 50px;
@@ -56,12 +56,10 @@ body {
   @media all and (min-width: 768px) {
     margin-right: 100px;
     margin-top: 60px;
-
-    @media all and (min-width: 768px) {
-      font-size: 30px;
-    }
+    font-size: 30px;
   }
   @media all and (min-width: 1200px) {
+    font-size: 40px;
   }
 }
 .main {
@@ -83,7 +81,7 @@ body {
   position: absolute;
   list-style-type: none;
   text-align: center;
-  color: #50b2ab;
+  color: #68b9c7;
   font-size: 15px;
   margin-top: 30px;
   margin-right: 40%;
@@ -124,7 +122,7 @@ body {
       font-weight: 350;
       font-size: small;
       background-color: #e0dede;
-      color: #50b2ab;
+      color: #68b9c7;
       border: 1px grey solid;
       border-radius: 10px;
       padding: 4px;
@@ -143,7 +141,7 @@ body {
     }
     .x-button {
       color: white;
-      background-color: #50b2ab;
+      background-color: #68b9c7;
       font-size: 15px;
       width: 25px;
       height: 25px;
