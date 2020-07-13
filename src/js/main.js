@@ -32,12 +32,12 @@ function removeFavouriteItem(event) {
     const elemId = favourites[currentFavouriteIndex].id;
     const elemLi = document.getElementById(`${elemId}`); //encontrar el elemento de datalist para borrar estilos.
     if (elemLi) {
-      elemLi.classList.remove("favourite-styles"); //borrar estilos de data list
+      elemLi.classList.remove("favourite-styles"); //borrar estilos de datalist
     }
     favourites.splice(currentFavouriteIndex, 1); //eliminar de array de favoritos
   }
 
-  //eliminar del listado de favoritos el elemento del click x
+  //eliminar del listado de favoritos el elemento del click con botón x
   favouriteList.removeChild(liElement);
   localStorage.setItem("key-favourites", JSON.stringify(favourites)); //guardar array sin el elemento borrado en localStorage
 }
