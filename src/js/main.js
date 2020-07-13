@@ -1,32 +1,9 @@
 "use strict";
-//listener object favourite list
-//paint reset button
-//listener event reset button
-
-//CLICK BUTTON SEARCH
-//get API properties
-//paint properties
-//listener event of searched list
-
-//CLICK SEARCHED OBJECT
-//add ot take off on favourite list
-//update favourite list
-//change searched serie styles
-
-//CLICK IN FAVOURITE X
-//remove element of array
-//update favourite list
-//reverse element searched styles
-
-//CLICK RESET BUTTON
-//remove all elements of favourite list array
-//update favourite list HTML
-//update searching list styles//
 
 const dataList = document.querySelector(".js-data-list");
 const favouriteList = document.querySelector(".js-favourite-list");
-//array de objetos que tienen name y image como atributos
-let favourites = [];
+
+let favourites = []; //array de objetos que tienen name, image y id como atributos
 
 //RESET FAVOURITES ARRAY
 function resetFavourites(event) {
@@ -34,12 +11,11 @@ function resetFavourites(event) {
     const elemId = favourites[i].id;
     const elemLi = document.getElementById(`${elemId}`);
     if (elemLi) {
-      elemLi.classList.remove("favourite-styles"); //hacer función?
+      elemLi.classList.remove("favourite-styles"); //quitar estilos de datalist
     }
   }
-
-  favourites = [];
-  reloadFavouriteList();
+  favourites = []; //vaciar array
+  reloadFavouriteList(); //recargar lista favoritos (ya vacía)
   localStorage.setItem("key-favourites", JSON.stringify(favourites));
 }
 //REMOVE FAVORITE ITEM
@@ -54,16 +30,16 @@ function removeFavouriteItem(event) {
   console.log(currentFavouriteIndex);
   if (currentFavouriteIndex !== -1) {
     const elemId = favourites[currentFavouriteIndex].id;
-    const elemLi = document.getElementById(`${elemId}`);
+    const elemLi = document.getElementById(`${elemId}`); //encontrar el elemento de datalist para borrar estilos.
     if (elemLi) {
-      elemLi.classList.remove("favourite-styles"); //hacer función?
+      elemLi.classList.remove("favourite-styles"); //borrar estilos de data list
     }
-    favourites.splice(currentFavouriteIndex, 1);
+    favourites.splice(currentFavouriteIndex, 1); //eliminar de array de favoritos
   }
 
-  //eliminar del listado el elemento del click
+  //eliminar del listado de favoritos el elemento del click x
   favouriteList.removeChild(liElement);
-  localStorage.setItem("key-favourites", JSON.stringify(favourites));
+  localStorage.setItem("key-favourites", JSON.stringify(favourites)); //guardar array sin el elemento borrado en localStorage
 }
 
 //REALOAD FAVOURITE LIST
@@ -129,7 +105,6 @@ function selectFavourite(event) {
 }
 
 // GENERATE DATALIST AFTER SEARCH
-
 function getListData(event) {
   const inputText = document.querySelector(".js-input-text").value;
 

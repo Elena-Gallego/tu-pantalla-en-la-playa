@@ -9,12 +9,13 @@
   width: 100vw;
   height: 100vh;
   background-image: url(/assets/images/header.jpg);
+
   background-position: center;
   background-size: cover;
 
   .p {
     text-align: end;
-    margin-top: 150px;
+    margin-top: 320px;
     margin-right: 15px;
     color: white;
     text-transform: uppercase;
@@ -35,7 +36,7 @@
     height: 500px;
   }
   @media all and (min-width: 1200px) {
-    height: 700px;
+    height: 100vh;
   }
 }
 .input-text {
@@ -49,7 +50,7 @@
   border-radius: 10px;
   margin-right: 10px;
   text-transform: uppercase;
-  border: 1px #d3c9c6 solid;
+  border: 1px #c9bdbab9 solid;
   outline: 0;
   @media all and (min-width: 768px) {
     width: 40%;
