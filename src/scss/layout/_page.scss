@@ -7,6 +7,7 @@ body {
   background-color: whitesmoke;
 }
 .favourite-styles {
+  border-radius: 5px;
   margin-top: 20px;
   background-color: #68b9c7;
 }
@@ -49,6 +50,7 @@ body {
       width: 80%;
     }
     h2 {
+      color: grey;
       padding: 10px;
       font-size: 20px;
       text-align: center;
@@ -58,7 +60,7 @@ body {
       }
     }
     img {
-      width: 100%;
+      width: 85%;
       border: 1px grey solid;
       margin-top: 20px;
       min-width: 85%;
@@ -95,7 +97,9 @@ body {
   margin-right: 50px;
   padding-left: 40px;
 }
-
+//.favourite-title {
+// font-size: 15px;
+//}
 .favourite-list {
   width: auto;
   max-width: 30%;
@@ -110,6 +114,7 @@ body {
   padding-top: 30px;
   margin-right: 40%;
   margin-left: 20px;
+
   li {
     width: auto;
     display: flex;
@@ -130,7 +135,7 @@ body {
       border: 1px grey solid;
       width: auto;
       max-width: 90%;
-      margin-top: 10px;
+      margin-top: 5px;
       border-radius: 10px;
       margin-left: 10px;
       margin-right: 10px;
@@ -152,6 +157,7 @@ body {
       border-radius: 10px;
       padding: 4px;
       margin-top: 10px;
+      margin-bottom: 10px;
 
       @media all and (min-width: 768px) {
         font-size: 25px;
@@ -165,14 +171,15 @@ body {
       }
     }
     .x-button {
+      margin-left: 70%;
+      margin-top: 20px;
       color: white;
       background-color: #68b9c7;
-      font-size: 15px;
+      font-size: 8px;
       width: 25px;
       height: 25px;
-      transform: translateY(-2px);
       border-radius: 50%;
-      margin-left: 20px;
+      text-align: center;
 
       @media all and (min-width: 768px) {
         font-size: 20px;

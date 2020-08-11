@@ -47,7 +47,8 @@ function reloadFavouriteList() {
   favouriteList.innerHTML = "";
   console.log(favouriteList);
   if (favourites.length > 0) {
-    favouriteList.innerHTML = "Tus favoritas";
+    favouriteList.innerHTML = "Favoritas";
+
     const liButtonElem = document.createElement("li");
     const resetButton = document.createElement("button");
     resetButton.type = "button";
@@ -59,17 +60,17 @@ function reloadFavouriteList() {
   }
   for (let i = 0; i < favourites.length; i++) {
     const liElement = document.createElement("li");
+    const buttonElement = document.createElement("button");
+    buttonElement.classList.add("x-button");
+    buttonElement.type = "button";
+    buttonElement.innerHTML = "X";
+    liElement.appendChild(buttonElement);
     const imgElement = document.createElement("img");
     imgElement.src = favourites[i].image;
     liElement.appendChild(imgElement);
     const h2Element = document.createElement("h2");
     h2Element.innerHTML = favourites[i].name;
     liElement.appendChild(h2Element);
-    const buttonElement = document.createElement("button");
-    buttonElement.classList.add("x-button");
-    buttonElement.type = "button";
-    buttonElement.innerHTML = "X";
-    h2Element.appendChild(buttonElement);
 
     buttonElement.addEventListener("click", removeFavouriteItem);
 
@@ -78,7 +79,7 @@ function reloadFavouriteList() {
   console.log(favouriteList);
 }
 
-//PAINT FAVOURITE LIST
+//CREATE FAVOURITE ARRAY
 function selectFavourite(event) {
   event.currentTarget.classList.toggle("favourite-styles");
   const elemName = event.currentTarget.querySelector("h2").innerHTML;
@@ -95,7 +96,6 @@ function selectFavourite(event) {
       id: elemId,
     };
     favourites.push(favouriteObject);
-    console.log(favourites);
   } else {
     favourites.splice(currentFavouriteIndex, 1);
   }
@@ -104,17 +104,19 @@ function selectFavourite(event) {
   localStorage.setItem("key-favourites", JSON.stringify(favourites));
 }
 
-// GENERATE DATALIST AFTER SEARCH
+//GENERATE DATALIST AFTER SEARCH
 function getListData(event) {
   const inputText = document.querySelector(".js-input-text").value;
 
   fetch(`http://api.tvmaze.com/search/shows?q=${inputText}`)
     .then((response) => response.json())
     .then((data) => {
-      dataList.innerHTML = "Hemos encontrado esto:";
+      dataList.innerHTML = "Elige una serie:";
       for (let i = 0; i < data.length; i++) {
+        //li
         const liElement = document.createElement("li");
         liElement.setAttribute("id", data[i].show.id);
+        //img
         const imgElement = document.createElement("img");
         if (data[i].show.image) {
           imgElement.src = data[i].show.image.medium;
@@ -123,9 +125,13 @@ function getListData(event) {
             "https://via.placeholder.com/210x295/ffffff/666666/?text=NO-IMAGE.";
         }
         liElement.appendChild(imgElement);
+
+        //h2
         const h2Element = document.createElement("h2");
         h2Element.innerHTML = data[i].show.name;
         liElement.appendChild(h2Element);
+
+        //añado li a datalist. Aquí se pinta.
         dataList.appendChild(liElement);
         liElement.addEventListener("click", selectFavourite);
       }
@@ -134,12 +140,9 @@ function getListData(event) {
 const buttonSearch = document.querySelector(".js-button-search");
 buttonSearch.addEventListener("click", getListData);
 
-//LOCALSTORAGE/
+//LOCALSTORAGE LECTURA/
 const savedFavourites = JSON.parse(localStorage.getItem("key-favourites"));
 if (savedFavourites && savedFavourites.length > 0) {
   favourites = savedFavourites;
   reloadFavouriteList();
 }
-
-//get data cache
-//JSON.stringify para convertir array a elemento string y poderlo guardar en  localStorage.

@@ -1,16 +1,17 @@
 .page__header {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 3rem;
+  margin-bottom: 5px;
 }
-
 .header-wrapper {
   padding: 10px;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   background-image: url(../../assets/images/header.jpg);
   background-position: center;
   background-size: cover;
+  border-bottom: 2px grey solid;
+  margin-bottom: 5px;
 
   .h1 {
     text-align: end;
@@ -60,6 +61,11 @@
     margin-top: 20px;
   }
 }
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #b3b3b3;
+  opacity: 1;
+} /* Firefox */
 .button-search {
   padding: 5px;
   border-radius: 10px;
