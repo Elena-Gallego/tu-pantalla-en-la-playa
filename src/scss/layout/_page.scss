@@ -43,6 +43,7 @@ body {
     align-items: center;
     list-style-type: none;
     text-align: center;
+    background-color: #68b9c7;
     @media all and (min-width: 768px) {
       width: 100%;
     }
@@ -61,7 +62,7 @@ body {
     }
     img {
       width: 85%;
-      border: 1px grey solid;
+      border: 5px solid white;
       margin-top: 20px;
       min-width: 85%;
       border-radius: 10px;
@@ -102,7 +103,7 @@ body {
 //}
 .favourite-list {
   width: auto;
-  max-width: 30%;
+  max-width: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -114,6 +115,7 @@ body {
   padding-top: 30px;
   margin-right: 40%;
   margin-left: 20px;
+  overflow: scroll;
 
   li {
     width: auto;
@@ -132,7 +134,7 @@ body {
       }
     }
     img {
-      border: 1px grey solid;
+      border: 3px solid white;
       width: auto;
       max-width: 90%;
       margin-top: 5px;
@@ -153,28 +155,30 @@ body {
       font-size: small;
       background-color: #e0dede;
       color: #68b9c7;
-      border: 1px grey solid;
+      border: 1px white;
       border-radius: 10px;
       padding: 4px;
       margin-top: 10px;
       margin-bottom: 10px;
 
       @media all and (min-width: 768px) {
-        font-size: 25px;
+        font-size: 16px;
         width: 100px;
         padding: 2px;
         margin: 20px;
       }
       @media all and (min-width: 1200px) {
         width: 100%;
-        font-size: 35px;
+        font-size: 18px;
       }
     }
     .x-button {
       margin-left: 70%;
+      font-family: sans-serif;
       margin-top: 20px;
-      color: white;
-      background-color: #68b9c7;
+      color: #68b9c7;
+
+      background-color: white;
       font-size: 8px;
       width: 25px;
       height: 25px;
@@ -185,6 +189,11 @@ body {
         font-size: 20px;
         width: 35px;
         height: 35px;
+      }
+      @media all and (min-width: 1200px) {
+        font-size: 18px;
+        width: 25px;
+        height: 25px;
       }
     }
   }
