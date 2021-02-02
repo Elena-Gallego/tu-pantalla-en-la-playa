@@ -108,7 +108,7 @@ function selectFavourite(event) {
 function getListData(event) {
   const inputText = document.querySelector(".js-input-text").value;
 
-  fetch(`http://api.tvmaze.com/search/shows?q=${inputText}`)
+  fetch(`https://api.tvmaze.com/search/shows?q=${inputText}`)
     .then((response) => response.json())
     .then((data) => {
       dataList.innerHTML = "Elige una serie:";
