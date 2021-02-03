@@ -21,7 +21,7 @@ function resetFavourites(event) {
 //REMOVE FAVORITE ITEM
 function removeFavouriteItem(event) {
   //eliminar del array el objeto
-  const liElement = event.currentTarget.parentElement.parentElement;
+  const liElement = event.currentTarget.parentElement;
   const elemName = liElement.querySelector("h2").innerHTML;
   const currentFavouriteIndex = favourites.findIndex((favourite) => {
     return favourite.name === elemName;
@@ -38,11 +38,12 @@ function removeFavouriteItem(event) {
   }
 
   //eliminar del listado de favoritos el elemento del click con botón x
-  favouriteList.removeChild(liElement);
+  //favouriteList.removeChild(liElement);
+  reloadFavouriteList();
   localStorage.setItem("key-favourites", JSON.stringify(favourites)); //guardar array sin el elemento borrado en localStorage
 }
 
-//REALOAD FAVOURITE LIST
+//RELOAD FAVOURITE LIST
 function reloadFavouriteList() {
   favouriteList.innerHTML = "";
   console.log(favouriteList);
@@ -139,6 +140,14 @@ function getListData(event) {
 }
 const buttonSearch = document.querySelector(".js-button-search");
 buttonSearch.addEventListener("click", getListData);
+const inputSearch = document.querySelector(".js-input-text");
+inputSearch.addEventListener("keydown", function (event){
+  if (event.key === 'Enter') {  //checks whether the pressed key is "Enter"
+    getListData(event);
+  }
+});
+
+
 
 //LOCALSTORAGE LECTURA/
 const savedFavourites = JSON.parse(localStorage.getItem("key-favourites"));
