@@ -1,87 +1,88 @@
 #README
 # Tu pantalla en la playa
 
-Enunciado:
+Statement:
 
-El ejercicio consiste en desarrollar una aplicación web de búsqueda de series de TV que nos permite
-marcar y desmarcar las series como favoritas y guardarlas en local storage.
-El ejercicio también tiene una parte de maquetación con HTML y Sass.
-Vamos de definir los distintos hitos de los que ha constado el ejercicio:
+The exercise consists of developing a web application to search for TV series that allows us to
+mark and unmark the series as favorites and save them in local storage.
+The exercise also has a layout part with HTML and Sass.
+Let's define the different milestones that the exercise has consisted of:
 
-1. Estructura básica
+1. Basic structure
 
-   En primer lugar, realizar una estructura básica sobre este modelo. 
+   First, make a basic structure on this model.
 
-   La aplicación de búsqueda de series debe consta de dos partes:
+   The series search application should consist of two parts:
 
-   1. Un campo de texto y un botón para buscar series por su título.
-   2. Un listado de resultados de búsqueda donde aparece el cartel de la serie y el título.
+   1. A text field and a button to search for series by title.
+   2. A list of search results where the poster of the series and the title appear.
 
-2. Búsqueda
+2. Search
 
-   Al hacer clic sobre el botón de Buscar, la aplicación debe conectarse al API abierto de TVMaze para
-   búsqueda de series. Para construir la URL de búsqueda hay que recoger el texto que ha introducido la usuaria en el campo
-   de búsqueda.
+   When clicking on the Search button, the application must connect to the open TVMaze API to
+   series search. To build the search URL, you must collect the text that the user has entered in the field
+   search.
    
-   Por cada show contenido en el resultado de la búsqueda hay que pintar una tarjeta donde mostramos
-   una imagen de la serie y el título, se trata de la lista de series favoritas.
-   Algunas de las series que devuelve el API no tienen imagen. En ese caso hay que mostrar una imagen
-   de relleno. 
+   For each show contained in the search result you have to paint a card where we show
+   an image of the series and the title, it is the list of favorite series.
+   Some of the strings returned by the API have no image. In that case you have to show an image
+   filler.
 
-   Para pintar la información en la página se puede elegir entre hacerlo de forma básica con innerHTML o
-   manipulando de forma avanzada el DOM.
+   To paint the information on the page you can choose between doing it in a basic way with innerHTML or
+   advanced manipulation of the DOM.
 
-3. Favoritos
+3. Favorites
 
-   - Una vez aparecen los resultados de búsqueda, la usuaria puede indicar cuáles son nuestras series favoritas.
+   - Once the search results appear, the user can indicate which are our favorite series.
 
-   Para ello, al hacer clic sobre una serie debe pasar lo siguiente:
+   To do this, when clicking on a series the following must happen:
 
-   - El color de fondo y el de fuente se intercambian, indicando que es una serie favorita.
-   - Hay que mostrar un listado en la parte izquierda de la pantalla, debajo del formulario de búsqueda, con
-     las series favoritas. 
-   - Las series favoritas deben seguir apareciendo a la izquierda aunque la usuaria realice otra búsqueda.
+   - The background color and the font color are interchanged, indicating that it is a favorite series.
+   - You have to show a list on the left side of the screen, below the search form, with
+     favorite series.
+   - Favorite series should continue to appear on the left even if the user performs another search.
 
-4. Almacenamiento local.
+4. Local storage.
 
-   Almacenar el listado de favoritos en el localStorage. De esta forma, al recargar la página el listado de
-   favoritos se debe mostrarse.
+   Store the list of favorites in the localStorage. In this way, when reloading the page the list of
+   favorites should be displayed.
 
-5. BONUS: Borrar favoritos
+5. BONUS: Delete favorites
 
-   Como bonus, os proponemos la opción de borrar favoritos. Al hacer clic sobre el icono de una 'x' al lado de
-   cada favorito, hay que borrar el favorito clicado de la lista y del localStorage.
-   Para terminar de rematar nuestra app de series, nos gustaría poder añadir/quitar como favorito al hacer clic
-   sobre una serie del lado de la derecha. Y que, si realizamos una nueva búsqueda y sale una serie que ya es
-   favorita, aparezca ya resaltada en los resultados de búsqueda (con colores de fondo y texto intercambiados).
-   Y ya sería fantástico si al final de la lista de favoritos hay un botón para borrarlos todos los favoritos a la vez.
-   
-
-6. BONUS: Afinar la maquetación
-
-   Una vez terminada la parte de interacción, podemos centrarnos en la parte de maquetación donde decidir los estilos. 
+   As a bonus, we offer you the option to delete favorites. By clicking on the 'x' icon next to
+   each favorite, you have to delete the clicked favorite from the list and from the localStorage.
+   To finish finishing our series app, we would like to be able to add / remove as a favorite by clicking
+   over a series on the right hand side. And what, if we do a new search and a series comes up that is already
+   favorite, is already highlighted in the search results (with swapped background and text colors).
+   And it would be great if at the end of the list of favorites there is a button to delete all the favorites at once.
    
 
-7. Tecnologías aplicadas en este ejercicio:
+6. BONUS: Fine-tune the layout
+
+   Once the interaction part is finished, we can focus on the layout part where we can decide the styles.
+   
+
+7. Technologies applied in this exercise:
 
 - General:
-  Usar una estructura adecuada de ficheros y carpetas para un proyecto web, y enlazar bien los distintos
-  ficheros*.
-  Tener el código perfectamente indentado*.
-  Uso de control de versiones con ramas para manejar un proyecto de código.
+  Use an adequate structure of files and folders for a web project, and link the different ones well
+  files *.
+  Have the code perfectly indented *.
+  Using version control with branches to manage a code project.
 
 - JavaScript:
-  Crear código JavaScript con sintaxis correcta y bien estructurado*.
-  Usar constantes / variables para almacenar información y re-asignar valores*.
-  Usar condicionales para ejecutar acciones distintas en función de una condición*.
-  Saber trabajar con listados de datos (arrays).
-  Usar funciones para estructurar el código.
-  Saber modificar la información del DOM para añadir contenido dinámico*.
-  Saber escuchar eventos del DOM y actuar en consecuencia.
+  Create JavaScript code with correct and well-structured syntax *.
+  Use constants / variables to store information and reassign * values.
+  Use conditionals to execute different actions based on a * condition.
+  Know how to work with data lists (arrays).
+  Use functions to structure your code.
+  Know how to modify the DOM information to add dynamic content *.
+  Know how to listen to DOM events and act accordingly.
 
--Peticiones AJAX y APIs
-   Crear peticiones con fetch y promesas.
-   Saber trabajar correctamente con la respuesta del servidor*.
-   Gestionar información en formato JSON.
-   Usar el localStorage para guardar información en el navegador.
+-AJAX requests and APIs
+   Create requests with fetch and promises.
+   Know how to work correctly with the server's response *.
+   Manage information in JSON format.
+   Use the localStorage to save information in the browser.
+
 
