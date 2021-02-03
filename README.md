@@ -1,5 +1,4 @@
-! (https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
-
+#README
 # Tu pantalla en la playa
 
 Enunciado:
@@ -56,12 +55,12 @@ Vamos de definir los distintos hitos de los que ha constado el ejercicio:
    sobre una serie del lado de la derecha. Y que, si realizamos una nueva búsqueda y sale una serie que ya es
    favorita, aparezca ya resaltada en los resultados de búsqueda (con colores de fondo y texto intercambiados).
    Y ya sería fantástico si al final de la lista de favoritos hay un botón para borrarlos todos los favoritos a la vez.
+   
 
 6. BONUS: Afinar la maquetación
 
    Una vez terminada la parte de interacción, podemos centrarnos en la parte de maquetación donde decidir los estilos. 
-
-
+   
 
 7. Tecnologías aplicadas en este ejercicio:
 
@@ -78,7 +77,7 @@ Vamos de definir los distintos hitos de los que ha constado el ejercicio:
   Saber trabajar con listados de datos (arrays).
   Usar funciones para estructurar el código.
   Saber modificar la información del DOM para añadir contenido dinámico*.
-  Saber escuchar eventos del DOM y actuar en consecuencia*.
+  Saber escuchar eventos del DOM y actuar en consecuencia.
 
 -Peticiones AJAX y APIs
    Crear peticiones con fetch y promesas.
