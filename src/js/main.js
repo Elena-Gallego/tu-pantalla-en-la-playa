@@ -134,6 +134,10 @@ function getListData(event) {
 
         //añado li a datalist. Aquí se pinta.
         dataList.appendChild(liElement);
+        if(i===0){
+          location.href=`#${liElement.id}`; 
+        }
+        
         liElement.addEventListener("click", selectFavourite);
       }
     });
@@ -144,8 +148,12 @@ const inputSearch = document.querySelector(".js-input-text");
 inputSearch.addEventListener("keydown", function (event){
   if (event.key === 'Enter') {  //checks whether the pressed key is "Enter"
     getListData(event);
+    
+    
+
   }
 });
+
 
 
 
