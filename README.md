@@ -1,6 +1,8 @@
 #README
+
 # Tu pantalla en la playa
 
+![tu pantalla en la playa](docs/assets/images/favicon.ico)
 Statement:
 
 The exercise consists of developing a web application to search for TV series that allows us to
@@ -22,7 +24,7 @@ Let's define the different milestones that the exercise has consisted of:
    When clicking on the Search button, the application must connect to the open TVMaze API to
    series search. To build the search URL, you must collect the text that the user has entered in the field
    search.
-   
+
    For each show contained in the search result you have to paint a card where we show
    an image of the series and the title, it is the list of favorite series.
    Some of the strings returned by the API have no image. In that case you have to show an image
@@ -55,34 +57,30 @@ Let's define the different milestones that the exercise has consisted of:
    over a series on the right hand side. And what, if we do a new search and a series comes up that is already
    favorite, is already highlighted in the search results (with swapped background and text colors).
    And it would be great if at the end of the list of favorites there is a button to delete all the favorites at once.
-   
 
 6. BONUS: Fine-tune the layout
 
    Once the interaction part is finished, we can focus on the layout part where we can decide the styles.
-   
 
 7. Technologies applied in this exercise:
 
 - General:
   Use an adequate structure of files and folders for a web project, and link the different ones well
-  files *.
-  Have the code perfectly indented *.
+  files _.
+  Have the code perfectly indented _.
   Using version control with branches to manage a code project.
 
 - JavaScript:
-  Create JavaScript code with correct and well-structured syntax *.
-  Use constants / variables to store information and reassign * values.
-  Use conditionals to execute different actions based on a * condition.
+  Create JavaScript code with correct and well-structured syntax _.
+  Use constants / variables to store information and reassign _ values.
+  Use conditionals to execute different actions based on a _ condition.
   Know how to work with data lists (arrays).
   Use functions to structure your code.
-  Know how to modify the DOM information to add dynamic content *.
+  Know how to modify the DOM information to add dynamic content _.
   Know how to listen to DOM events and act accordingly.
 
 -AJAX requests and APIs
-   Create requests with fetch and promises.
-   Know how to work correctly with the server's response *.
-   Manage information in JSON format.
-   Use the localStorage to save information in the browser.
-
-
+Create requests with fetch and promises.
+Know how to work correctly with the server's response \*.
+Manage information in JSON format.
+Use the localStorage to save information in the browser.
