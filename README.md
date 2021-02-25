@@ -1,8 +1,9 @@
 #README
 
+![tu pantalla en la playa](docs/assets/images/favicon.ico)
+
 # Tu pantalla en la playa
 
-![tu pantalla en la playa](docs/assets/images/favicon.ico)
 Statement:
 
 The exercise consists of developing a web application to search for TV series that allows us to
