@@ -112,7 +112,6 @@ function getListData(event) {
   fetch(`https://api.tvmaze.com/search/shows?q=${inputText}`)
     .then((response) => response.json())
     .then((data) => {
-      dataList.innerHTML = "Elige una serie:";
       for (let i = 0; i < data.length; i++) {
         //li
         const liElement = document.createElement("li");
@@ -134,23 +133,25 @@ function getListData(event) {
 
         //añado li a datalist. Aquí se pinta.
         dataList.appendChild(liElement);
-        if(i===0){
-          location.href=`#${liElement.id}`; 
-        }
-        
         liElement.addEventListener("click", selectFavourite);
       }
+
+      if(dataList.childNodes.length>0){
+        dataList.classList.add("data-list");
+        dataList.classList.remove("empty-data-list");
+      }
+      
+      let firstLiElement = dataList.firstChild;
+      location.href=`#${firstLiElement.id}`;
     });
 }
+
 const buttonSearch = document.querySelector(".js-button-search");
 buttonSearch.addEventListener("click", getListData);
 const inputSearch = document.querySelector(".js-input-text");
 inputSearch.addEventListener("keydown", function (event){
   if (event.key === 'Enter') {  //checks whether the pressed key is "Enter"
     getListData(event);
-    
-    
-
   }
 });
 
